@@ -1,5 +1,5 @@
 #!/bin/bash
 
 mvn clean package || exit 1
-mv target/*-jar-with-dependencies.jar ./osc-cassette-recorder.jar
+mv target/*-jar-with-dependencies.jar ./oscrec.jar
 mvn clean
