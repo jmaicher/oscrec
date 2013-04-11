@@ -2,9 +2,9 @@ OSC Cassette Recorder
 =====================
 A command-line tool which provides record and playback functionality for OSC messages which are sent as UDP datagram packets.
 
-The use case for this tool was to ease the development and test of applications written for multitouch surfaces that use the [TUIO messaging protocol](http://www.tuio.org/) for the transmission of touch information. TUIO is based on the [OSC protocol](http://opensoundcontrol.org).
+![](http://i.imgur.com/fr9TTli.gif)
 
-
+The use case for this tool was to ease the development and test of applications written for multitouch surfaces that use the [TUIO messaging protocol](http://www.tuio.org/) (based on the [OSC protocol](http://opensoundcontrol.org)) for the transmission of touch information.
 
 **Similar tools:** 
 
@@ -13,7 +13,7 @@ The use case for this tool was to ease the development and test of applications 
 
 ## Usage
 
-	$ java -jar osc-cassette-recorder.jar --help
+	$ java -jar oscrec.jar --help
 
 	usage: java -jar [..].jar [record|play] OPTIONS
 
@@ -44,7 +44,7 @@ Some of the more glaring things to do:
 
 ## Credits
 
-This tool has been inspired by [Throng OSCDeck](https://code.google.com/p/throng/), a TUIO multiplexer written by [Johannes Luderschmidt](http://johannesluderschmidt.de/).
+This tool has been inspired by [Throng OSCDeck](https://code.google.com/p/throng/), a similar tool written by [Johannes Luderschmidt](http://johannesluderschmidt.de/).
 
 
 ## License
