@@ -1,16 +1,34 @@
 package de.jmaicher.osc.cassette_recorder;
 
-import java.util.ArrayList;
+import java.util.List;
 
+
+/**
+ * An instance of OSCCassette represents a recorded osc cassette
+ * which can be played using an {@link OSCCassettePlayer}.
+ * It is composed of many {@link RecordedOSCPacket}s and is usually
+ * created by an {@link OSCCassetteRecorder}.
+ * 
+ * @author jmaicher
+ */
 public class OSCCassette {
 
-	private final ArrayList<RecordedOSCPacket> recordedPackets;
+	private final List<RecordedOSCPacket> recordedPackets;
 	
-	public OSCCassette(ArrayList<RecordedOSCPacket> _recordedPackets) {
-		recordedPackets = _recordedPackets;
+	/**
+	 * Creates an {@link OSCCassette} with the given list of
+	 * {@link RecordedOSCPacket}s.
+	 * 
+	 * @param recordedPackets list of {@link RecordedOSCPacket}s
+	 */
+	public OSCCassette(final List<RecordedOSCPacket> recordedPackets) {
+		this.recordedPackets = recordedPackets;
 	}
 	
-	public ArrayList<RecordedOSCPacket> getRecordedPackets() {
+	/**
+	 * @return list of {@link RecordedOSCPacket}s
+	 */
+	public List<RecordedOSCPacket> getRecordedPackets() {
 		return recordedPackets;
 	}
 	

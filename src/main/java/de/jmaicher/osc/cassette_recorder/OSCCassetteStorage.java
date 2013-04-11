@@ -13,15 +13,30 @@ import org.apache.commons.codec.binary.Base64;
 import com.illposed.osc.OSCPacket;
 import com.illposed.osc.utility.OSCByteArrayToJavaConverter;
 
-public class OSCCassetteStorage {
+/**
+ * This class provides save/load functionality for the storage
+ * of {@link OSCCassette}s.
+ * 
+ * @author jmaicher
+ */
+public final class OSCCassetteStorage {
 
+	/** used to separate the record time from the actual serialized {@link OSCPacket} */
 	private static char SEPARATOR = ',';
 	
+	/**
+	 * Saves the given {@link OSCCassette} to the given {@link File}.
+	 * 
+	 * @param file		{@link File} to save the {@link OSCCassette} to.
+	 * @param cassette	{@link OSCCassette} to save
+	 * 
+	 * @throws IOException
+	 */
 	public static void save(File file, OSCCassette cassette) throws IOException {
 		BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 		
 		for(RecordedOSCPacket recordedPacket: cassette.getRecordedPackets()) {
-			writer.write(Long.toString(recordedPacket.getTime()));
+			writer.write(Long.toString(recordedPacket.getRelativeRecordTime()));
 			writer.write(",");
 			writer.write(Base64.encodeBase64String(recordedPacket.getOSCPacket().getByteArray()));
 			writer.newLine();
@@ -30,6 +45,14 @@ public class OSCCassetteStorage {
 		writer.close();
 	}
 	
+	/**
+	 * Loads a saved {@link OSCCassette} from the given {@link File}.
+	 * 
+	 * @param file	{@link File} to load from
+	 * @return		the loaded {@link OSCCassette}
+	 * 
+	 * @throws IOException
+	 */
 	public static OSCCassette load(File file) throws IOException {
 		BufferedReader reader = new BufferedReader(new FileReader(file));
 		ArrayList<RecordedOSCPacket> recordedPackets = new ArrayList<>();

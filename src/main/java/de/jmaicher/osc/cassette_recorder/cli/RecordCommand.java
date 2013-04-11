@@ -14,6 +14,12 @@ import de.jmaicher.osc.cassette_recorder.OSCCassette;
 import de.jmaicher.osc.cassette_recorder.OSCCassetteRecorder;
 import de.jmaicher.osc.cassette_recorder.OSCCassetteStorage;
 
+/**
+ * This class is responsible for the record command
+ * of the command-line interface.
+ * 
+ * @author jmaicher
+ */
 public final class RecordCommand {
 
 	public static final String COMMAND_STRING = "record";

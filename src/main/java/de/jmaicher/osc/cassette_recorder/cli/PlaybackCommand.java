@@ -13,6 +13,12 @@ import de.jmaicher.osc.cassette_recorder.OSCCassettePlayer;
 import de.jmaicher.osc.cassette_recorder.OSCCassetteStorage;
 import de.jmaicher.utils.ProgressObserver;
 
+/**
+ * This class is responsible for the playback command
+ * of the command-line interface.
+ * 
+ * @author jmaicher
+ */
 public final class PlaybackCommand {
 	
 	public static final String COMMAND_STRING = "play";

@@ -14,6 +14,13 @@ import de.jmaicher.commons.cli.GraciousGnuParser;
 import de.jmaicher.osc.cassette_recorder.cli.PlaybackCommand;
 import de.jmaicher.osc.cassette_recorder.cli.RecordCommand;
 
+/**
+ * This class provides the entry point for the command-line interface
+ * (@see {@link CLI#main}.
+ * 
+ * @author jmaicher
+
+ */
 public final class CLI {
 	public static final String VERSION = "0.0.1";
 	
