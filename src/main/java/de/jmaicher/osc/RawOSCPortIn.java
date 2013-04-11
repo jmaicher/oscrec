@@ -3,7 +3,6 @@ package de.jmaicher.osc;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
-import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.SocketException;
 
@@ -28,7 +27,7 @@ public class RawOSCPortIn extends OSCPort {
 	private boolean listening;
 	
 	/** @see com.illposed.osc.OSCPortIn */
-	private static final int BUFFER_SIZE = 1536;
+	private static final int BUFFER_SIZE = 65536;
 	
 	/**
 	 * Worker thread that receives OSC data and converts them
