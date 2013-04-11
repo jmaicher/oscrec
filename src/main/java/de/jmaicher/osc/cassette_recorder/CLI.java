@@ -22,7 +22,7 @@ import de.jmaicher.osc.cassette_recorder.cli.RecordCommand;
 
  */
 public final class CLI {
-	public static final String VERSION = "0.0.1";
+	public static final String VERSION = "0.1.0";
 	
 	public static final int DEFAULT_EXIT_STATUS_SUCCESS = 0; 
 	public static final int DEFAULT_EXIT_STATUS_ERROR = 1;
